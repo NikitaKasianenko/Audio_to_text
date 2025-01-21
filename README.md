@@ -1,53 +1,50 @@
-##Audio-to-Text Conversion Website
 
+# Audio-to-Text Conversion Website
 
-
-#Install using pip:
-
+## Install using pip:
+```
 pip install -r req.txt
+```
 
-#Navigate to the directory containing the app.py file.
+## Navigate to the directory containing the `app.py` file.
 
-Run the Flask server:
-
+### Run the Flask server:
+```
 python app.py
+```
 
-The server will start at http://127.0.0.1:5000.
+The server will start at [http://127.0.0.1:5000](http://127.0.0.1:5000).
 
-Start the Frontend:
+### Start the Frontend:
+Open the `index.html` file in a browser, or use a local web server to host it (e.g., with VSCode Live Server).
 
-Open the index.html file in a browser, or use a local web server to host it (e.g., with VSCode Live Server).
+---
 
-Usage
+## Usage
+1. Open the website in your browser.
+2. Upload an audio file using the interface.
+3. Wait for the file to be processed and the transcription to appear in the text box.
 
-Open the website in your browser.
+---
 
-Upload an audio file using the interface.
+## Troubleshooting
 
-Wait for the file to be processed and the transcription to appear in the text box.
+### Common Errors
 
-Troubleshooting
-
-Common Errors
-
-Error: [WinError 2] The system cannot find the file specified
-
-Ensure ffmpeg is installed and added to your PATH.
-
-Verify installation with:
-
+#### Error: `[WinError 2] The system cannot find the file specified`
+- Ensure `ffmpeg` is installed and added to your PATH.
+- Verify installation with:
+```bash
 ffmpeg -version
+```
 
-Error: 500 Internal Server Error
+#### Error: `500 Internal Server Error`
+- Check the Flask server logs for more details.
+- Ensure the transcription API key and configuration are correct.
 
-Check the Flask server logs for more details.
-
-Ensure the transcription API key and configuration are correct.
-
-CORS Issues:
-
+#### CORS Issues:
 Make sure Flask-CORS is properly configured in the backend:
-
+```python
 from flask_cors import CORS
 CORS(app)
-
+```
