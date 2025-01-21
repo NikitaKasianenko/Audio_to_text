@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="upload-box" id="uploadBox">
+                <img src="Frame 122.png" alt="Upload Icon" class="upload-icon">
+                <p>Drag & Drop your file<br>here</p>
+                <p>OR</p>
+                <input type="file" id="fileInput" name="file" accept="audio/*" hidden>
+                <button type="button" class="upload-btn" id="selectFileBtn">Select file</button>
+                <p id="fileName" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
+            </div>
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+        <label for="audioText">Audio Text</label>
+        <div class="text-box">
+            <textarea id="audioText" placeholder="See your text here!" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
